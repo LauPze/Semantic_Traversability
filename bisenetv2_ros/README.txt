@@ -21,3 +21,6 @@ Cinquième étape : On obtient un model.pth (avec la numérotation par époch, c
 
 On obtient le pytorch : bisenetv2_scripted.pt
 
+Une fois le modèle en .pt il suffit de changer le subscribers d'entrée dans bisenetv2_ros.py et lancer le noeud ROS : ros2 run bisenetv2_ros bisenetv2_node 
+
+On obtient l'image ségmentée en temps réel 
