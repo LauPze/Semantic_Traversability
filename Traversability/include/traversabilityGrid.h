@@ -73,27 +73,7 @@ class NodeMetaData {
         syz += p3d.y() * p3d.z();
         
     }
-    void insertSem(int semanticLabel) {
-/*
-        N++;
-        // deal with min max
-        z_min = std::min(p3d.z(), z_min);
-        z_max = std::max(p3d.z(), z_max);
-
-        // update momentums
-        sx += p3d.x();
-        sy += p3d.y();
-        sz += p3d.z();
-        sx2 += p3d.x() * p3d.x();
-        sy2 += p3d.y() * p3d.y();
-        sz2 += p3d.z() * p3d.z();
-        sxy += p3d.x() * p3d.y();
-        sxz += p3d.x() * p3d.z();
-        syz += p3d.y() * p3d.z();
-       
-        semanticLabelCounts[semanticLabel]++;
-*/   
-        
+    void insertSem(int semanticLabel) { 
         semantic_label = semanticLabel;
     }
 
@@ -110,8 +90,6 @@ class NodeMetaData {
     double sxz     = 0.;
     double syz     = 0.;
     
-    //std::unordered_map<int, int> semanticLabelCounts;
-    //std::map<CellKey, float> semanticHazardMap;
     std::map<int,int> semanticLabelCounts;
     bool valid_semantic = false;
     int semantic_label = -1;

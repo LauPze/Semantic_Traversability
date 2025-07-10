@@ -61,34 +61,8 @@ void traversabilityGrid::insertPointSem(Eigen::Vector3d &p3d, int semanticLabel)
             majority_label = label;
         }
     }
-    /*for(uint i=0; i < cell.semanticLabelCounts.size(); ++i){
-    	if (cell.semanticLabelCounts.at(i) > max_count) {
-            max_count = cell.semanticLabelCounts.at(i);
-            majority_label = (int)i;
-        }
-    }
-    */
-    /*
-    for (const auto& [label, count] : cell.semanticLabelCounts) {
-        if (count > max_count) {
-            max_count = count;
-            majority_label = label;
-        }
-    }
-    */
-
     cell.semantic_label = majority_label;
     
-    
-    //if (semanticLabel != 0) {
-    //    std::cout << "Inserting point " << p3d.transpose() << " with label " << semanticLabel << " at cell (" << ind.x() << "," << ind.y() << ")" << std::endl;
-    //}
-
-    //std::cout << "Inserting point " << p3d.transpose() << " with label " << semanticLabel << " at cell (" << ind.x() << "," << ind.y() << ")" << std::endl;
-    
-//    if (semanticLabel == 0) {
-//        std::cout << "[Warning] Label 0 detected for point " << p3d.transpose() << std::endl;
-//    }   
     _grid.at(ind.x()).at(ind.y()).insertSem(semanticLabel);
 }
 

@@ -21,7 +21,7 @@ def generate_launch_description():
                 {"robot_length":1.1},
                 {"draw_isodistance_each": 1.},
                 {"frame_id":"world"},
-                {"global_mapping":True},
+                {"global_mapping":False},
 
             ],
         )

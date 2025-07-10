@@ -112,8 +112,7 @@ class TraversabilityNode : public rclcpp::Node {
                 Eigen::Vector3d pt3(*it_x, *it_y, z);
                 traversabilityMap->insertPointSem(pt3, label);
 
-                nb_labeled_points++;
-            //}            
+                nb_labeled_points++;           
         }
 
         // Compute the hazard grid
@@ -139,8 +138,6 @@ class TraversabilityNode : public rclcpp::Node {
 
 	    if (haz(0) <= 0. || haz(5) == -1) 
                 continue;
-
-	    //std::cout << haz.transpose() << std::endl;
             
             map.at("hazard", *it)         = haz(0);
             map.at("step_haz", *it)       = haz(1);
